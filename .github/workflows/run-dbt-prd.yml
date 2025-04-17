@@ -31,4 +31,9 @@ jobs:
         run: | 
           dbt --version
           dbt debug
-          dbt --help
+     
+      - name: Check compile & test
+        run: |     
+          dbt compile
+          dbt run
+          dbt test
